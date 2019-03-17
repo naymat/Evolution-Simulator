@@ -45,7 +45,7 @@ bounce = 0.0
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="walls/StaticBody2D" index="0"]
 
-position = Vector2( 0, -2578.2 )
+position = Vector2( 0, -2582.2 )
 scale = Vector2( 1, 0.991824 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
@@ -65,7 +65,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D" index="3"]
 
-position = Vector2( -2306, -1290 )
+position = Vector2( -2305, -1290 )
 scale = Vector2( 2, 1 )
 shape = SubResource( 4 )
 _sections_unfolded = [ "Pause", "Transform", "Visibility", "Z Index" ]

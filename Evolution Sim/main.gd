@@ -110,7 +110,6 @@ func mutation():
 		return true
 	else:
 		return false
-	
 
 
 func _process(delta):
