@@ -6,6 +6,8 @@ onready var food_container = get_node("food_container")
 onready var generation_label = get_node("HUD/generation_label")
 
 var generation = 0
+# Mutation rate as a percent
+const MUTATION_RATE = 10
 
 var time_start = 0
 var time_now = 0
@@ -72,12 +74,11 @@ func spawn_new_generation():
 	var o
 	for i in new_gen_organisms:
 		#if entry is null we create a random organism
-		if i == null:
+		if i == null || mutation():
 			o = spawn_organism(rand_range(0.5,4)) 
 		else:
 			o = spawn_organism(i)
 		organism_container.add_child(o)
-	
 	
 # Selects organisms for reproduction using roulette wheel selection
 func select_organism():
@@ -96,9 +97,22 @@ func total_fitness():
 		sum += organism.calculate_fitness()
 	return sum
 		
+# Updates variable and HUD lable by 1
 func update_generation():
 	generation += 1
 	generation_label.set_text("Generation : " + str(generation))
+
+# Randomly mutates organism 
+func mutation():
+	randomize()
+	var rand = rand_range(0,100)
+	if(rand < MUTATION_RATE):
+		return true
+	else:
+		return false
+	
+
+
 func _process(delta):
 		if food_container.get_child_count() == 0:
 #			new 
