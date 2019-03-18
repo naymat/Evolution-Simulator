@@ -16,7 +16,7 @@ population, selection and mutation.
 </video>
 
 Organisms, indicated by the red circles, compete with other organisms for
-food. Food is represented by the small green circles and determines an organism's fitness. The more food an organism consumes, the more fit it is. The fittest organisms have the highest chance of reproducing.
+food. Food is represented by small green circles and determines an organism's fitness. The more food an organism consumes, the more fit it is. The fittest organisms have the highest chance of reproducing.
 
 Although organisms which consume more food have a higher chance of appearing in the next generation, this is not guaranteed. This program uses a Roulette
 Wheel Selection algorithm to determine which organism is selected after
