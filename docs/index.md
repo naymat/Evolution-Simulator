@@ -16,21 +16,19 @@ population, selection and mutation.
 </video>
 
 Organisms, indicated by the red circles, compete with other organisms for
-food. Food is represented by the small green circles and determines an organisms fitness. The more food an organism consumes, the more fit it is. The fittest organisms have the highest chance of reproducing.
+food. Food is represented by the small green circles and determines an organism's fitness. The more food an organism consumes, the more fit it is. The fittest organisms have the highest chance of reproducing.
 
-Although organisms which consume more food have a higher chance to appear in
-the next generation, this is not guaranteed. This program uses a Roulette
+Although organisms which consume more food have a higher chance of appearing in the next generation, this is not guaranteed. This program uses a Roulette
 Wheel Selection algorithm to determine which organism is selected after
-the feeding period. Organisms that are not able to consume any food
-immediately die off and do not appear in the next generation.
+the feeding period. Organisms that are unable to consume any food, immediately die off and do not appear in the next generation.
 
 Each time the feeding phase is over and organisms are selected for the
-next generation, there is a slight chance of mutation. The frequncy of
+next generation, there is a slight chance of mutation. The frequency of
 mutation is determined by the mutation rate which is represented by the following constant:
 
 ```js
 /*
-Mutation rate is the likelyhood a mutation will occur, 
+Mutation rate is the likelihood a mutation will occur, 
 represented by a percentage
 */
 
