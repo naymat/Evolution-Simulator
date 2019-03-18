@@ -5,7 +5,7 @@ layout: default
 # Introduction
 
 This project attempts to explore and provide a simple implementation of
-the main principles of genetic aglgorithms. These principles being
+the main principles of genetic algorithms. These principles being
 population, selection and mutation.
 
 ## Sample Simulation:
