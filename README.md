@@ -4,7 +4,7 @@ This project attempts to explore and provide a simple implementation of
 the main principles of genetic algorithms. These principles being
 population, selection and mutation.
 
-[Visit the website for a video demo and a general overview](link)
+[Visit the website for a video demo and a general overview](https://naymat.github.io/Evolution-Simulator/)
 
 <img src="./docs/screenshot.png">
 
