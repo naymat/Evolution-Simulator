@@ -12,6 +12,9 @@ const MUTATION_RATE = 10
 var time_start = 0
 var time_now = 0
 
+const MIN_SIZE = 0.5
+const MAX_SIZE = 3
+
 var new_gen_organisms = null
 var screensize
 func _ready():
@@ -21,8 +24,8 @@ func _ready():
 	#add_child(food_container)
 	#add_child(organism_container)
 	
-	initial_population(3)
-	spawn_food(4)
+	initial_population(5)
+	spawn_food(30)
 	pass
 
 #spawn random organisms for inital population
@@ -30,7 +33,7 @@ func _ready():
 func initial_population(num):
 	randomize()
 	for i in range(num):
-		spawn_organism(rand_range(0.5,4))
+		spawn_organism(rand_range(MIN_SIZE,MAX_SIZE))
 	pass
 
 func spawn_organism(size):
@@ -75,7 +78,7 @@ func spawn_new_generation():
 	for i in new_gen_organisms:
 		#if entry is null we create a random organism
 		if i == null || mutation():
-			o = spawn_organism(rand_range(0.5,4)) 
+			o = spawn_organism(rand_range(MIN_SIZE,MAX_SIZE)) 
 		else:
 			o = spawn_organism(i)
 		organism_container.add_child(o)
